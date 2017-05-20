@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "description" content = "Random chat. Welcome :3">
+		<meta name = "keywords" content = "chat, random, рандом, чат, kindness, brony, test">
+		<meta name = "robots" content = "index,nofollow">
+		<title> Messages </title>
+		<style>
+			@font-face
+			{
+				font-family: "consola";
+				src: url("consola.ttf") format("truetype");
+			}
+			*
+			{
+				color: #E00011;
+				font-family: consola;
+				font-size: 12pt;
+			}
+			body
+			{
+				-webkit-backface-visibility: hidden;
+				overflow-y: hidden;
+			}
+			
+			::-webkit-scrollbar
+			{
+				width: 12px;
+			} 
+			::-webkit-scrollbar-track
+			{
+				-webkit-box-shadow: inset 0 0 6px rgba(110,0,130,0.5); 
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+			}
+			::-webkit-scrollbar-thumb
+			{
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				background: rgba(215,0,215,0.9);
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+			}
+			::-webkit-scrollbar-thumb:window-inactive
+			{
+				background: rgba(255,0,255,0.5); 
+			}
+		</style>
+		<link id="styleSheet1" rel="stylesheet" href="client4.css">
+		<script src="socket.io-1.3.7.js"></script>
+		<script src="client4.js"></script>
+	</head>
+	<body onload="Connect('http://chat-zmey.rhcloud.com:8000')" style="background-color: #01004E">
+		
+		<input class="myMessageDiv" autofocus onkeypress="SendKey(event, 0)" id="inputDiv">
+		<button class="myMessageButton" onclick="SendBut()"> Send </button>
+		
+		<p class="myNicknameP">NickName:</p>
+		<input class="myNicknameDiv" onkeypress="SendKey(event, 1)" id="nicknameDiv" value="NoName">
+		<button class="myNicknameButton" onclick="AcceptNickName()"> Accept </button>
+		<div class="textDiv" id="textDiv"></div>
+		<div class="nicknamesDiv" id="nicknamesDiv"></div>
+		<div class="usersInfoDiv" id="usersInfoDiv">
+			<div class="nicknamesDivs" id="usersCountDiv"></div>
+		</div>
+		<div class="textDivs" style="position: absolute; left: 670px; top: 11px;">Have a nice day! ^_^</div>
+		
+		<div id="bottomPanel" class="bottomPanel">
+			<input style="position: absolute; top: 80px; left: 2px;" type="checkbox" id="chk1" onclick="Notify(0)">
+			<label style="position: absolute; top: 79px; left: 22px;" onclick="Notify(1)"> Уведомления </label>
+			
+			<audio id="radio"></audio>
+			<div class="player" onclick="Player(event, 1)">Play</div>
+			<div class="player" onclick="Player(event, 0)">Stop</div>
+			<canvas id="vol" class="player" width=100 height=24 style="top: 57px; padding: 0px; height: 24px">Volume (this element isn't supported)</canvas>
+		</div>
+		<div id="bottomPanelButton" class="openBottomPanel" onclick="OpenPanel(0)">&#62;&#62;</div>
+		
+		<div id="signalColor" class="signalColor" onContextMenu="return false">
+			Color
+			<div id="signalColors" style="background-color: black; left: -71px; top: 26px;" onclick="ChangeSignalColor('black')"></div>
+			<div id="signalColors" style="background-color: white; left: -46px; top: 26px;" onclick="ChangeSignalColor('white')"></div>
+			<div id="signalColors" style="background-color: darkred; left: -21px; top: 26px;" onclick="ChangeSignalColor('darkred')"></div>
+			<div id="signalColors" style="background-color: #00ff00; left: 4px; top: 26px;" onclick="ChangeSignalColor('#00ff00')"></div>
+			<div id="signalColors" style="background-color: yellow; left: 29px; top: 26px;" onclick="ChangeSignalColor('yellow')"></div>
+			<div id="signalColors" style="background-color: orange; left: 54px; top: 26px;" onclick="ChangeSignalColor('orange')"></div>
+			<div id="signalColors" style="background-color: cyan; left: 79px; top: 26px;" onclick="ChangeSignalColor('cyan')"></div>
+			<div id="signalColors" style="background-color: purple; left: 104px; top: 26px;" onclick="ChangeSignalColor('purple')"></div>
+		</div>
+		
+		<div id="rightPanel" class="rightPanel" onmousedown="Signal(event)" onContextMenu="return false">
+		</div>
+		<div id="rightPanelButton" class="openRightPanel" onclick="OpenPanel(1)">&#62;&#62;</div>
+		
+		<div id="ground" class=""></div>
+		
+	</body>
+</html>
