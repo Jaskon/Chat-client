@@ -87,7 +87,9 @@
 			<div id="signalColors" style="background-color: purple; left: 104px; top: 26px;" onclick="ChangeSignalColor('purple')"></div>
 		</div>
 		
-		<div id="rightPanel" class="rightPanel" onmousedown="Signal(event)" onContextMenu="return false">
+		<div id="rightPanel" class="rightPanel" onmousedown="Signal(event, 0)" onmousemove="Signal(event, 1)" onmouseup="Signal(event, 2)" onmouseout="Signal(event, 3)" onContextMenu="return false">
+			<p id="timeClearDrawSignal" style="color: black; z-index: 6; position: absolute; left: 3px; top: -12px;">30</p>
+			<canvas id="signalCanvas" style="z-index: 3; position: absolute; left: 0px; top: 0px;"></canvas>
 		</div>
 		<div id="rightPanelButton" class="openRightPanel" onclick="OpenPanel(1)">&#62;&#62;</div>
 		
