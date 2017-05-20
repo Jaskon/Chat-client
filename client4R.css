@@ -1,0 +1,277 @@
+			span.dis-connect
+			{
+				color: green;
+			}
+			span.nicknameChanged
+			{
+				color: lightgreen;
+			}
+			span.nicknameNotChanged
+			{
+				color: red;
+			}
+			
+			
+			hr
+			{
+				border: 1px solid #8A1FB3;
+				margin: 2px 0 2px 0;
+			}
+			
+			.myNicknameP
+			{
+				color: #E4DA00;
+				z-index: 2;
+				position: absolute;
+				left: 334px;
+				top: -6px;
+			}
+			.myNicknameDiv
+			{
+				color: #01004E;
+				z-index: 2;
+				position: absolute;
+				left: 420px;
+				top: 8px;
+				width: 162px;
+			}
+			.myNicknameButton
+			{
+				color: #7B0078;
+				z-index: 2;
+				position: absolute;
+				left: 580px;
+				top: 8px;
+			}
+			.myMessageDiv
+			{
+				color: #01004E;
+				z-index: 2;
+				position: absolute;
+				left: 48px;
+				top: 8px;
+				width: 174px;
+			}
+			.myMessageButton
+			{
+				color: #7B0078;
+				z-index: 2;
+				position: absolute;
+				left: 220px;
+				top: 8px;
+			}
+			
+			div.nicknamesDiv
+			{
+				border-radius: 10px 0px 10px 0px;
+				border: 3px double #EEA00E;
+				z-index: 1;
+				padding: 4px;
+				position: fixed;
+				top: 70px;
+				left: 10px;
+				width: 195px;
+				height: calc(100% - 292px);
+				transition: 0.8s ease-out;
+			}
+			div.nicknamesDivs
+			{
+				margin: 0px 2px 0px 2px;
+				text-align: right;
+				font-weight: bold;
+			}
+			div.usersInfoDiv
+			{
+				border-radius: 0 8px 0 8px;
+				border: 3px double #EEA00E;
+				z-index: 1;
+				padding: 4px;
+				position: fixed;
+				top: calc(100% - 195px);
+				left: 10px;
+				width: 195px;
+				height: 70px;
+				text-align: right;
+				font-weight: bold;
+				transition: 0.8s ease-out;
+			}
+			
+			div.textDiv
+			{
+				z-index: 1;
+				position: absolute;
+				top: 70px;
+				left: 230px;
+				width: 56%;
+				height: calc(100% - 174px);
+				overflow-y: scroll;
+				word-wrap: break-word;
+				transition: 0.8s ease-out;
+			}
+			div.textDivs
+			{
+				font-weight: bold;
+				animation: textAni 0.5s ease-out;
+			}
+			
+			div.bottomPanel
+			{
+				z-index: 3;
+				background-color: #00778A;
+				position: fixed;
+				left: 0px;
+				top: calc(100% - 100px);
+				width: 100%;
+				height: 100px;
+				box-shadow: 0 0 20px #00CAD7;
+				transition: 0.8s ease-out;
+			}
+			div.openBottomPanel
+			{
+				z-index: 4;
+				cursor: pointer;
+				border: 1px solid black;
+				background-color: cyan;
+				position: absolute;
+				left: calc(100% - 25px);
+				top: calc(100% - 25px);
+				height: 20px;
+				transform: rotate(90deg);
+				transition: 0.5s ease;
+			}
+			
+			.player
+			{
+				background-color: transparent;
+				border: 1px solid black;
+				padding: 3px;
+				display: inline-block;
+				position: relative;
+				left: 400px;
+				top: 50px;
+				height: 18px;
+				font-weight: bold;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			.signalColor
+			{
+				z-index: 3;
+				background-color: #00778A;
+				border: 1px solid black;
+				position: fixed;
+				left: 100%;
+				top: calc(50% - 327px);
+				width: 60px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				cursor: pointer;
+				box-shadow: 0 0 20px #00CAD7;
+				transition: 0.8s ease-out;
+			}
+			.signalColor div
+			{
+				visibility: hidden;
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+			}
+			.signalColor:hover div
+			{
+				visibility: visible;
+			}
+			div.rightPanel
+			{
+				z-index: 2;
+				background-color: #00778A;
+				position: fixed;
+				left: 100%;
+				top: calc(50% - 300px);
+				width: 200px;
+				height: 500px;
+				cursor: default;
+				box-shadow: 0 0 20px #00CAD7;
+				transition: 0.8s ease-out;
+			}
+			div.openRightPanel
+			{
+				z-index: 4;
+				cursor: pointer;
+				border: 1px solid black;
+				background-color: cyan;
+				position: absolute;
+				left: calc(100% - 25px);
+				top: calc(100% - 50px);
+				height: 20px;
+				transform: rotate(180deg);
+				transition: 0.5s ease;
+			}
+			div.circleSignal
+			{
+				z-index: 5;
+				border: 3px solid;
+				border-radius: 100%;
+				background-color: transparent;
+				position: absolute;
+				height: 1px;
+				width: 1px;
+				transition: 0.6s linear;
+			}
+			
+			
+			@keyframes textAni
+			{
+				from
+				{
+					opacity: 0;
+					margin-left: -200px;
+				}
+				to
+				{
+					opacity: 1;
+					margin-left: 0;
+				}
+			}
+			
+			@keyframes nicknamesAni
+			{
+				from
+				{
+					opacity: 0;
+					margin-left: -200px;
+					margin-right: 200px;
+				}
+				to
+				{
+					opacity: 1;
+					margin-left: 2px;
+					margin-right: 2px;
+				}
+			}
+			@keyframes nicknamesAniOut
+			{
+				from
+				{
+					opacity: 1;
+					margin-left: 2px;
+					margin-right: 2px;
+				}
+				to
+				{
+					opacity: 0;
+					margin-left: -200px;
+					margin-right: 200px;
+				}
+			}
+			
+			.runAniIn
+			{
+				animation: nicknamesAni 0.5s ease-out;
+			}
+			.runAniOut
+			{
+				animation: nicknamesAniOut 0.5s ease-out;
+			}
