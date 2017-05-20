@@ -427,7 +427,7 @@
 				var radio = document.all.radio;
 				if (k == 1)
 				{
-					radio.src = "http://radio.everypony.info:8000/320";
+					radio.src = "http://s4.everypony.ru:8000/128";
 					radio.volume = 0.08;
 					radio.play();
 				}
